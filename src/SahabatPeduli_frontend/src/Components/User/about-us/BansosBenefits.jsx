@@ -8,8 +8,8 @@ function BansosBenefits() {
   return (
     <section className='bansos-section'>
         <div className='bansos-benefits-heading'>
-            <h4>KENAPA SAHABAT PEDULI?</h4>
-            <h1>Kelebihan dari <span className='highlight-text-1'>Sahabat</span><span className='highlight-text-2'>Peduli</span></h1>
+            <h4>Why SahabatPeduli?</h4>
+            <h1>Advantages of <span className='highlight-text-1'>Sahabat</span><span className='highlight-text-2'>Peduli</span></h1>
         </div>
         <div className='bansos-benefits-category'>
           <div className='row'>
@@ -21,7 +21,7 @@ function BansosBenefits() {
                   </div>
                 </div>
                 <h4>Real-Time</h4>
-                <p>Masyarakat dapat memantau pergerakan dana bantuan sosial secara real-time. dari pemerintah pusat hingga penerima akhir yaitu masyarakat.</p>
+                <p>The public can monitor the movement of social assistance funds in real-time, from the central government to the final recipient, namely the community.</p>
               </div>
             </div>
             
@@ -32,8 +32,8 @@ function BansosBenefits() {
                     <img src={transparansi} alt="" />
                   </div>
                 </div>
-                <h4>Transparansi</h4>
-                <p>Semua transaksi dicatat secara transparan di blockchain dan tidak dapat diubah, sehingga publik dapat memantau distribusi dana dengan aman.</p>
+                <h4>Transparency</h4>
+                <p>All transactions are recorded transparently on the blockchain and cannot be changed, so the public can monitor the distribution of funds safely.</p>
               </div>
             </div>
             
@@ -44,8 +44,8 @@ function BansosBenefits() {
                     <img src={access} alt="" />
                   </div>
                 </div>
-                <h4>Mudah Diakses</h4>
-                <p>SahabatPeduli mudah diakses oleh semua kalangan melalui perangkat apa pun dengan antarmuka yang ramah pengguna.</p>
+                <h4>Easy to access</h4>
+                <p>SahabatPeduli is easily accessible to all people through any device with a user-friendly interface.</p>
               </div>
             </div>
           </div>

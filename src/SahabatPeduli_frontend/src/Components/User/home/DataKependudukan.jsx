@@ -7,19 +7,19 @@ function DataKependudukan() {
         <div className="d-lg-flex">
           <div className="provinsi">
             <h1>38</h1>
-            <p>Provinsi</p>
+            <p>Province</p>
           </div>
           <div className="kota">
             <h1>514</h1>
-            <p>Kota/Kabupaten</p>
+            <p>City/District</p>
           </div>
           <div className="kecamatan">
             <h1>7.288</h1>
-            <p>Kecamatan</p>
+            <p>Subdistrict</p>
           </div>
           <div className="desa">
-            <h1>81 Ribu+</h1>
-            <p>Desa</p>
+            <h1>81 Thousand+</h1>
+            <p>Village</p>
           </div>
         </div>
       </section>
