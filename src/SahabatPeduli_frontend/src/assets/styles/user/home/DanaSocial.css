@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* Mobile */
+/* Medium Devices */
+@media (min-width: 768px) {
+}
+/* Large Devices */
+@media (min-width: 992px) {
+}
+/* Large desktop */
+@media (min-width: 1200px) {
+  #dana-sosial {
+    background: var(--Blue, #0d4e77);
+    padding: 100px 135px 164px 135px;
+  }
+  #dana-sosial h4 {
+    color: var(--Green, #b5ddf7);
+    font-family: Poppins;
+    font-size: 16px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px; /* 118.75% */
+    text-transform: uppercase;
+  }
+  #dana-sosial h1 {
+    margin-top: 70px;
+    color: var(--White, #f4f8fb);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px;
+  }
+  #dana-sosial p {
+    margin-top: 60px;
+    color: #fff;
+    width: 870px;
+
+    text-align: center;
+    /* Poppins 18px */
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  #data-kependudukan {
+    margin-top: -80px;
+    margin-bottom: 20px;
+    border-radius: 95px;
+    background: #fff;
+    box-shadow: 0px 4px 15.8px 0px rgba(0, 0, 0, 0.1);
+
+    padding: 16px 99px 18px 101px;
+  }
+  #data-kependudukan h1 {
+    color: var(--Green, #12a592);
+    text-align: center;
+    /* Poppins Bold 64px */
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px;
+  }
+  #data-kependudukan p {
+    color: var(--Black, #353535);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px; /* 118.75% */
+    text-transform: capitalize;
+  }
+  .provinsi,
+  .kota,
+  .kecamatan {
+    margin-right: 109px;
+  }
+}

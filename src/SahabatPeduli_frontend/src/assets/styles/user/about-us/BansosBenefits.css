@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.bansos-section{
+    background: var(--Blue, #0D4E77);
+    flex-shrink: 0;
+    padding: 100px 135px;
+}
+.bansos-benefits-heading h4{
+    color: #25D6BF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.bansos-benefits-heading h1{
+    width: 819px;
+    color: var(--White, #F4F8FB);
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px;
+}
+.bansos-benefits-heading .highlight-text-1{
+    color: var(--White, #F4F8FB);
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px;
+}
+.bansos-benefits-heading .highlight-text-2{
+    color: var(--Green, #12A592);
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px;
+}
+.bansos-benefits-card-1{
+    width: 370px;
+    height: 502px;
+    padding: 20px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: var(--White, #F4F8FB);
+}
+.bansos-benefits-card-1 h4{
+    width: 276px;
+    height: 19px;
+    flex-shrink: 0;
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.bansos-benefits-card-1 p{
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.bansos-benefits-image-1{
+    width: 261px;
+    height: 220px;
+    margin: 23px 61px 44px 61px;
+    flex-shrink: 0;
+    
+}
+.bansos-benefits-card-2{
+    width: 370px;
+    height: 502px;
+    padding: 20px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: var(--White, #F4F8FB);
+}
+.bansos-benefits-card-2 h4{
+    width: 276px;
+    height: 19px;
+    flex-shrink: 0;
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.bansos-benefits-card-2 p{
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.bansos-benefits-image-2{
+    width: auto;
+    height: 220px;
+    flex-shrink: 0;
+    margin: 34px 68px 37px 69px;
+    
+}
+.bansos-benefits-category{
+    margin-top: 30px;
+}
+.bansos-benefits-card-3{
+    width: 370px;
+    height: 502px;
+    padding: 20px;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: var(--White, #F4F8FB);
+}
+.bansos-benefits-card-3 h4{
+    width: 276px;
+    height: 19px;
+    flex-shrink: 0;
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 19px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}
+.bansos-benefits-card-3 p{
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.bansos-benefits-image-3{
+    width: 207px;
+    height: 219px;
+    flex-shrink: 0;
+    margin: 34px 82px 34px 81px;
+}
+.bansos-benefits-card-1:hover,
+.bansos-benefits-card-2:hover,
+.bansos-benefits-card-3:hover {
+    background: var(--Black, #353535);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.bansos-benefits-card-1:hover h4,
+.bansos-benefits-card-2:hover h4,
+.bansos-benefits-card-3:hover h4 {
+    color: #F4F8FB;
+}
+
+.bansos-benefits-card-1:hover p,
+.bansos-benefits-card-2:hover p,
+.bansos-benefits-card-3:hover p {
+    color: #F4F8FB;
+}
