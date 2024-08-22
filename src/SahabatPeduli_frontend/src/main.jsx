@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { initSatellite } from "@junobuild/core";
 import Home from './Pages/User/Home';
-import App from './Pages/User/App';
 import AboutUs from './Pages/User/AboutUs';
 import HomeGovernment from './Pages/Government/HomeGovernment';
 import AboutUsGovernment from './Pages/Government/AboutUsGovernment';
@@ -20,10 +19,10 @@ async function startApp() {
       path: '/',
       element: <Home />,
     },
-    {
-      path: '/dana',
-      element: <App />,
-    },
+    // {
+    //   path: '/dana',
+    //   element: <App />,
+    // },
     {
       path: '/about-us',
       element: <AboutUs />,
@@ -32,7 +31,7 @@ async function startApp() {
       path: '/government',
       element: <HomeGovernment />,
     },
-    {
+  {
       path: '/about-us-government',
       element: <AboutUsGovernment />,
     },
