@@ -1,71 +1,67 @@
 import HashMap "mo:base/HashMap";
 import Nat "mo:base/Nat";
 import Text "mo:base/Text";
+import Principal "mo:base/Principal";
 
 actor {
-  // Simulated balance storage using HashMap
-  var balances : HashMap.HashMap<Text, Nat> = HashMap.HashMap<Text, Nat>(10, Text.equal, Text.hash);
+  var balances : HashMap.HashMap<Principal, Nat> = HashMap.HashMap<Principal, Nat>(10, Principal.equal, Principal.hash);
 
-  // Function to initialize an account with some balance
   public func initializeAccount(account : Text, initialBalance : Nat) : async Text {
-    balances.put(account, initialBalance);
-    return "Account initialized with balance " # Nat.toText(initialBalance);
+    let principal = Principal.fromText(account);
+    balances.put(principal, initialBalance);
+    return "Account initialized for " # account # " with balance " # Nat.toText(initialBalance);
   };
 
-  // Function to get the balance of a single account
   public func getBalance(account : Text) : async ?Nat {
-    return balances.get(account);
+    let principal = Principal.fromText(account);
+    return balances.get(principal);
   };
 
-  // Function to calculate the total balance of two accounts
   public func getTotalBalance(account1 : Text, account2 : Text) : async ?Nat {
-    // Retrieve balances for both accounts
-    let balance1Opt = balances.get(account1);
-    let balance2Opt = balances.get(account2);
+    let principal1 = Principal.fromText(account1);
+    let principal2 = Principal.fromText(account2);
 
-    // Ensure both accounts exist and handle different scenarios
+    let balance1Opt = balances.get(principal1);
+    let balance2Opt = balances.get(principal2);
+
     switch (balance1Opt, balance2Opt) {
       case (?b1, ?b2) {
-        return ?(b1 + b2); // Return the sum of both balances
+        return ?(b1 + b2);
       };
       case (?b1, null) {
-        return ?b1; // Return balance of account1, account2 does not exist
+        return ?b1;
       };
       case (null, ?b2) {
-        return ?b2; // Return balance of account2, account1 does not exist
+        return ?b2;
       };
       case (null, null) {
-        return null; // Both accounts do not exist
+        return null;
       };
     };
   };
 
-  // Function to send balance from account1 to account2
-  public func sendBalance(account1 : Text, account2 : Text, amount : Nat) : async ?Text {
-    // Retrieve balances for both accounts
-    let balance1Opt = balances.get(account1);
-    let balance2Opt = balances.get(account2);
+  public func sendBalance(fromAccount : Text, toAccount : Text, amount : Nat) : async ?Text {
+    let principal1 = Principal.fromText(fromAccount);
+    let principal2 = Principal.fromText(toAccount);
 
-    // Check if account1 does not have a balance
+    let balance1Opt = balances.get(principal1);
+    let balance2Opt = balances.get(principal2);
+
     switch (balance1Opt) {
       case (null) {
-        return ?("Account1 does not have a balance");
+        return ?("Account " # fromAccount # " does not have a balance");
       };
       case (?balance1) {
         if (balance1 < amount) {
-          return ?("Insufficient funds in Account1");
+          return ?("Insufficient funds in account " # fromAccount);
         } else {
-          // Update balance of account1
-          balances.put(account1, balance1 - amount);
-
-          // Update balance of account2, even if it didn't exist before
+          balances.put(principal1, balance1 - amount);
           let newBalance2 = switch (balance2Opt) {
-            case (null) { amount }; // If account2 doesn't exist, initialize with the amount
-            case (?balance2) { balance2 + amount }; // If account2 exists, add to the current balance
+            case (null) { amount };
+            case (?balance2) { balance2 + amount };
           };
-          balances.put(account2, newBalance2);
-
-          return ?("Transfer successful");
+          balances.put(principal2, newBalance2);
+          return ?("Transfer successful from " # fromAccount # " to " # toAccount);
         };
       };
     };

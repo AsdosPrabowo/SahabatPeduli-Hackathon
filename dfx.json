@@ -10,14 +10,25 @@
         }
       }
     },
-    "canister_transaksi": {
+    "SahabatPeduli_backend": {
       "main": "src/SahabatPeduli_backend/main.mo",
       "type": "motoko"
+    },
+    "SahabatPeduli_frontend": {
+      "source": [
+        "src/SahabatPeduli_frontend/dist"
+      ],
+      "dependencies": [
+        "SahabatPeduli_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/SahabatPeduli_frontend/index.html"
+      },
+      "type": "assets"
     }
   },
   "defaults": {
     "build": {
-      "args": "",
       "packtool": ""
     }
   },
