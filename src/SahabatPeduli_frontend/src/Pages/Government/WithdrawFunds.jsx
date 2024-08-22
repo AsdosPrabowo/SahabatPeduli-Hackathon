@@ -1,12 +1,12 @@
 import React from 'react'
 import NavbarGovernment from '../../Components/Government/home/NavbarGovernment'
-import FrontWithdrawFunding from '../../Components/Government/withdraw-funds/FrontWithdrawFunding'
+import CreateTransactionGovernment from '../../Components/Government/withdraw-funds/CreateTransactionGovernment'
 
 function WithdrawFunds() {
   return (
     <div>
       <NavbarGovernment/>
-      <FrontWithdrawFunding/>
+      <CreateTransactionGovernment/>
     </div>
   )
 }

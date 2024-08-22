@@ -41,6 +41,10 @@ async function startApp() {
       path: '/front-withdraw-funding',
       element: <FrontWithdrawFunding />,
     },
+    {
+      path: '/tracker',
+      element: <WithdrawFunds />,
+    },
   ]);
 
   // Render the application

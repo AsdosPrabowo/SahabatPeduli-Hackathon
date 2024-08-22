@@ -28,13 +28,13 @@ function DanaProspects() {
       <h1 className="title-prospek">Pantau Prospek Dana Bantuan Sosial</h1>
       <div className="table-prospects">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
-        <table className="table table-hover">
+        <table className="table table-hover mt-5">
           <thead>
             <tr>
               <th>No</th>
               <th>Province Name</th>
               <th>Date</th>
-              <th>Social Assistance</th>
+              <th>Fund Type</th>
               <th>Total Amount</th>
             </tr>
           </thead>
