@@ -27,7 +27,7 @@ function BansosProblems() {
                         <img src={kurtra} className='mr-3' alt="" />
                       </div>
                       <div className='problems-poin-1'>
-                        <h3>Lack of Transparency.</h3>
+                        <h3>Lack of Transparency</h3>
                         <p>The distribution of social aid funds is not transparent, and important information is often not published.</p>
                       </div>
                     </div>
