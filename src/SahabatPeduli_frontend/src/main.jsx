@@ -7,6 +7,7 @@ import AboutUs from './Pages/User/AboutUs';
 import HomeGovernment from './Pages/Government/HomeGovernment';
 import AboutUsGovernment from './Pages/Government/AboutUsGovernment';
 import WithdrawFunds from './Pages/Government/WithdrawFunds';
+import FrontWithdrawFunding from './Components/Government/withdraw-funds/FrontWithdrawFunding';
 
 async function startApp() {
   // Initialize the satellite
@@ -37,8 +38,8 @@ async function startApp() {
       element: <AboutUsGovernment />,
     },
     {
-      path: '/withdraw-funds',
-      element: <WithdrawFunds />,
+      path: '/front-withdraw-funding',
+      element: <FrontWithdrawFunding />,
     },
   ]);
 
