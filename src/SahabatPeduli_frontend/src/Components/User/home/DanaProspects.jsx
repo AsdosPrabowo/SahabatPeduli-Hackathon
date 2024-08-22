@@ -3,7 +3,6 @@ import { SahabatPeduli_backend } from 'declarations/SahabatPeduli_backend'; // R
 import '../../../assets/styles/user/home/DanaProspects.css';
 
 function DanaProspects() {
-  const [account1, setAccount1] = useState('');
   const [account2, setAccount2] = useState('');
   const [amount, setAmount] = useState('');
   const [totalBalance, setTotalBalance] = useState(null);
@@ -13,9 +12,9 @@ function DanaProspects() {
 
   const handleGetTotalBalance = async (event) => {
     event.preventDefault();
-    console.log('Fetching total balance for accounts:', account1, account2);
+    console.log('Fetching total balance for current user and account:', account2);
     try {
-      const result = await SahabatPeduli_backend.getTotalBalance(account1, account2);
+      const result = await SahabatPeduli_backend.getTotalBalance(account2);
       console.log('Total balance fetched:', result);
       setTotalBalance(result !== null ? result.toString() : 'Accounts not found');
     } catch (error) {
@@ -26,9 +25,9 @@ function DanaProspects() {
 
   const handleGetBalance = async (event) => {
     event.preventDefault();
-    console.log('Fetching balance for account:', account1);
+    console.log('Fetching balance for the current user');
     try {
-      const result = await SahabatPeduli_backend.getBalance(account1);
+      const result = await SahabatPeduli_backend.getBalance();
       console.log('Balance fetched:', result);
       setBalance(result !== null ? result.toString() : 'Account not found');
     } catch (error) {
@@ -39,10 +38,10 @@ function DanaProspects() {
 
   const handleSendBalance = async (event) => {
     event.preventDefault();
-    console.log('Sending balance from', account1, 'to', account2, 'amount:', amount);
+    console.log('Sending balance to', account2, 'amount:', amount);
     try {
       const amountNat = BigInt(amount); // Ensure the amount is a BigInt
-      const response = await SahabatPeduli_backend.sendBalance(account1, account2, amountNat);
+      const response = await SahabatPeduli_backend.sendBalance(account2, amountNat);
       console.log('Transfer result:', response);
       setTransferMessage(response !== null ? response : 'Transfer failed.');
     } catch (error) {
@@ -58,16 +57,7 @@ function DanaProspects() {
       <div className="table-prospects">
         <form onSubmit={handleGetTotalBalance}>
           <label>
-            Account 1:
-            <input
-              type="text"
-              value={account1}
-              onChange={(e) => setAccount1(e.target.value)}
-              required
-            />
-          </label>
-          <label>
-            Account 2:
+            Other Account (for Total Balance):
             <input
               type="text"
               value={account2}
@@ -85,16 +75,7 @@ function DanaProspects() {
         )}
 
         <form onSubmit={handleGetBalance}>
-          <label>
-            Account (Check Balance):
-            <input
-              type="text"
-              value={account1}
-              onChange={(e) => setAccount1(e.target.value)}
-              required
-            />
-          </label>
-          <button type="submit">Get Balance</button>
+          <button type="submit">Get My Balance</button>
         </form>
         {balance && (
           <div>
@@ -104,15 +85,6 @@ function DanaProspects() {
         )}
 
         <form onSubmit={handleSendBalance}>
-          <label>
-            From Account:
-            <input
-              type="text"
-              value={account1}
-              onChange={(e) => setAccount1(e.target.value)}
-              required
-            />
-          </label>
           <label>
             To Account:
             <input
