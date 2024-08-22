@@ -55,12 +55,17 @@
   }
   
   .transaction-history {
-    margin-top: 20px;
+    margin-top: 65px;
   }
   
   .transaction-history h3 {
+    color: var(--Black, #353535);
+    font-family: Poppins;
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
   }
   
   .transaction-table {
