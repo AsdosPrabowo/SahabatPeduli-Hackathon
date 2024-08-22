@@ -39,8 +39,8 @@ function NavbarGovernment() {
           </li>
           <li>
             <Link
-              to="/tarik-dana"
-              className={location.pathname === '/withdraw-funds' ? 'active' : ''}
+              to="/front-withdraw-funding"
+              className={location.pathname === '/front-withdraw-funding' ? 'active' : ''}
             >
               Withdraw Funds
             </Link>

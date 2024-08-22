@@ -1,0 +1,83 @@
+.front-withdraw-funding-section {
+    padding: 20px;
+    margin: 128px 135px 128px 135px;
+  }
+  
+  .front-withdraw-heading p {
+    width: 670px;
+    color: var(--Black, #353535);
+    font-family: Poppins;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 84px;
+  }
+  
+  .fund-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  .sisa-dana-card-1, .sisa-dana-card-2 {
+    width: 100%;
+    max-width: 353px;
+    height: 189px;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+  }
+  
+  .sisa-dana-card-1 {
+    background-color: #0D4E77;
+    margin-right: 47px;
+  }
+  
+  .sisa-dana-card-2 {
+    background-color: #12A592;
+  }
+  
+  .sisa-dana-card-1 p, .sisa-dana-card-2 p {
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .sisa-dana-card-1 h2, .sisa-dana-card-2 h2 {
+    font-family: Poppins, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .transaction-history {
+    margin-top: 20px;
+  }
+  
+  .transaction-history h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .transaction-table thead {
+    background-color: #f1f1f1;
+  }
+  
+  .transaction-table th,
+  .transaction-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
