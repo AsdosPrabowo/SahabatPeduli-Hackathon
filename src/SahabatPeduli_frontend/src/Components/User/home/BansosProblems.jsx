@@ -15,8 +15,8 @@ function BansosProblems() {
             <div className='row'>
               <div className='col-lg-4'>
                 <div className='bansos-problems-content'>
-                  <h5>PERMASALAHAN SAAT INI</h5>
-                  <h1>Masalah dalam Penyaluran Dana Bantuan Sosial</h1>
+                  <h5>Current Issues</h5>
+                  <h1>Problems in the Distribution of Social Aid Funds.</h1>
                 </div>
               </div>
               <div className='col-lg-8 col-md-6'>
@@ -27,8 +27,8 @@ function BansosProblems() {
                         <img src={kurtra} className='mr-3' alt="" />
                       </div>
                       <div className='problems-poin-1'>
-                        <h3>Kurangnya Transparansi</h3>
-                        <p>Penyaluran dana bantuan sosial tidak terbuka, dan informasi penting sering tidak dipublikasikan.</p>
+                        <h3>Lack of Transparency.</h3>
+                        <p>The distribution of social aid funds is not transparent, and important information is often not published.</p>
                       </div>
                     </div>
                   </div>
@@ -39,8 +39,8 @@ function BansosProblems() {
                         <img src={markas} className='mr-3' alt="" />
                       </div>
                       <div className='problems-poin-2'>
-                        <h3>Maraknya Kasus Korupsi</h3>
-                        <p>Kasus korupsi dana bantuan sosial mengurangi kepercayaan masyarakat & menunjukkan lemahnya pengawasan.</p>
+                        <h3>The Rise of Corruption Cases</h3>
+                        <p>Social aid corruption cases reduce public trust & highlight weak oversight.</p>
                       </div>
                     </div>
                   </div>
@@ -51,8 +51,8 @@ function BansosProblems() {
                         <img src={disdan} className='mr-3' alt="" />
                       </div>
                       <div className='problems-poin-3'>
-                        <h3>Distribusi Dana tidak Merata</h3>
-                        <p>Bantuan sosial sering tidak didistribusikan secara adil, menyebabkan ketimpangan penerimaan.</p>
+                        <h3>Uneven distribution of funds</h3>
+                        <p>Social aid is often unfairly distributed, leading to inequitable reception</p>
                       </div>
                     </div>
                   </div>
@@ -64,8 +64,8 @@ function BansosProblems() {
                         <img src={minak} className='mr-3' alt="" />
                       </div>
                       <div className='problems-poin-4'>
-                        <h3>Minimnya Akuntabilitas</h3>
-                        <p>Masyarakat sulit memantau atau melaporkan penyelewengan dana, sehingga pengawasan kurang efektif.</p>
+                        <h3>Lack of accountability</h3>
+                        <p>The public faces difficulties in monitoring or reporting fund misuse, resulting in ineffective oversight.</p>
                       </div>
                     </div>
                   </div>

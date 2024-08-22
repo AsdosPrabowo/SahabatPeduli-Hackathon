@@ -42,25 +42,25 @@ function App() {
 
   return (
     <main>
-      <h1>Sahabat Peduli - Manajemen Dana</h1>
+      <h1>Sahabat Peduli - Fund Management</h1>
       
       <section>
-        <h2>Tambah Provinsi</h2>
+        <h2>Add Province</h2>
         <input
           type="text"
-          placeholder="Nama Provinsi"
+          placeholder="Province Name"
           value={provinceName}
           onChange={(e) => setProvinceName(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Kota (pisahkan dengan koma)"
+          placeholder="City (separate with commas)"
           value={cities}
           onChange={(e) => setCities(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Total Dana"
+          placeholder="Total Funds"
           value={totalFund}
           onChange={(e) => setTotalFund(e.target.value)}
         />
@@ -68,55 +68,55 @@ function App() {
       </section>
 
       <section>
-        <h2>Alokasikan Dana</h2>
+        <h2>Allocate Funds</h2>
         <input
           type="text"
-          placeholder="Nama Provinsi"
+          placeholder="Province Name"
           value={provinceName}
           onChange={(e) => setProvinceName(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Jumlah Dana"
+          placeholder="Total Funds"
           value={allocatedAmount}
           onChange={(e) => setAllocatedAmount(e.target.value)}
         />
-        <button onClick={allocateFund}>Alokasikan Dana</button>
+        <button onClick={allocateFund}>Allocate Funds</button>
       </section>
 
       <section>
-        <h2>Lihat Data Provinsi</h2>
+        <h2>View Province Data</h2>
         <input
           type="text"
-          placeholder="Nama Provinsi"
+          placeholder="Province Name"
           value={provinceName}
           onChange={(e) => setProvinceName(e.target.value)}
         />
-        <button onClick={getProvince}>Lihat Provinsi</button>
+        <button onClick={getProvince}>View Province</button>
         {fetchError && <p style={{color: 'red'}}>{fetchError}</p>}
         {fetchedProvince && (
           <div>
-            <h3>Data Provinsi</h3>
-            <p>Nama: {fetchedProvince.name}</p>
-            <p>Kota: {fetchedProvince.cities.join(', ')}</p>
-            <p>Total Dana: {fetchedProvince.total_fund.toString()}</p>
-            <p>Dana Dialokasikan: {fetchedProvince.allocated_fund.toString()}</p>
+            <h3>Province Data</h3>
+            <p>Name: {fetchedProvince.name}</p>
+            <p>City: {fetchedProvince.cities.join(', ')}</p>
+            <p>Total Funds: {fetchedProvince.total_fund.toString()}</p>
+            <p>Allocated Funds: {fetchedProvince.allocated_fund.toString()}</p>
           </div>
         )}
       </section>
 
       <section>
-        <h2>Lihat Semua Provinsi</h2>
-        <button onClick={getAllProvinces}>Lihat Semua Provinsi</button>
+        <h2>View All Provinces</h2>
+        <button onClick={getAllProvinces}>View All Provinces</button>
         {allProvinces.length > 0 && (
           <div>
-            <h3>Daftar Semua Provinsi</h3>
+            <h3>List All Provinces</h3>
             {allProvinces.map((province, index) => (
               <div key={index}>
-                <p>Nama: {province.name}</p>
-                <p>Kota: {province.cities.join(', ')}</p>
-                <p>Total Dana: {province.total_fund.toString()}</p>
-                <p>Dana Dialokasikan: {province.allocated_fund.toString()}</p>
+                <p>Name: {province.name}</p>
+                <p>City: {province.cities.join(', ')}</p>
+                <p>Total Funds: {province.total_fund.toString()}</p>
+                <p>Allocated Funds: {province.allocated_fund.toString()}</p>
                 <hr />
               </div>
             ))}

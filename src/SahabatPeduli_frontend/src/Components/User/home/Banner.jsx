@@ -12,10 +12,10 @@ function Banner() {
       <div className="row">
         <div className="col-lg-7">
           <div className='banner-content'>
-            <h5>APA ITU SAHABAT PEDULI?</h5>
-            <h1>Kenalan dengan <span className='highlight-text-1'>Sahabat</span><span className='highlight-text-2'>Peduli</span></h1>
-            <p>SahabatPeduli adalah website untuk mendata bantuan sosial yang diberikan oleh Kementrian Sosial Republik Indonesia. Blabalbalbalblablab</p>
-            <button className='read-again '>Baca lagi</button>
+            <h5>WHAT IS SAHABAT PEDULI</h5>
+            <h1>Get to know <span className='highlight-text-1'>Sahabat</span><span className='highlight-text-2'>Peduli</span></h1>
+            <p>SahabatPeduli is an innovative solution based on ICP blockchain technology designed to ensure transparency and accountability in the distribution of social aid funds.</p>
+            <button className='read-again '>Read more</button>
           </div>
         </div>
         <div className="col-lg-5">

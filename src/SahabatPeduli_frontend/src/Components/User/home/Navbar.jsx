@@ -29,7 +29,7 @@ function Navbar() {
             to="/"
             className={location.pathname === '/' ? 'active' : ''}
           >
-            Beranda
+            Home
           </Link>
         </li>
         <li>
@@ -37,7 +37,7 @@ function Navbar() {
             to="/about-us"
             className={location.pathname === '/about-us' ? 'active' : ''}
           >
-            Tentang Kami
+            About Us
           </Link>
         </li>
 
