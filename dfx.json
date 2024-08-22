@@ -1,18 +1,18 @@
 {
   "canisters": {
-    "SahabatPeduli_backend": {
+    "icp_ledger_canister": {
+      "type": "custom",
+      "candid": "https://raw.githubusercontent.com/dfinity/ic/1ac5439c6da1aafe8156c667c313344c0245fea3/rs/rosetta-api/icp_ledger/ledger.did",
+      "wasm": "https://download.dfinity.systems/ic/1ac5439c6da1aafe8156c667c313344c0245fea3/canisters/ledger-canister.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "ryjl3-tyaaa-aaaaa-aaaba-cai"
+        }
+      }
+    },
+    "canister_transaksi": {
       "main": "src/SahabatPeduli_backend/main.mo",
       "type": "motoko"
-    },
-    "SahabatPeduli_frontend": {
-      "dependencies": [
-        "SahabatPeduli_backend"
-      ],
-      "source": [
-        "src/SahabatPeduli_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "SahabatPeduli_frontend"
     }
   },
   "defaults": {
