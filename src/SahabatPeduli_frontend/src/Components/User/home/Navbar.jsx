@@ -14,7 +14,7 @@ function Navbar() {
       return setUser(user);
     });
 
-    return () => sub(); // Unsubscribe when the component unmounts
+    return () => sub();
   }, []);
 
   const handleSignIn = async () => {
@@ -33,7 +33,7 @@ function Navbar() {
             to="/"
             className={location.pathname === '/' ? 'active' : ''}
           >
-            Beranda
+            Home
           </Link>
         </li>
         <li>
@@ -41,7 +41,7 @@ function Navbar() {
             to="/about-us"
             className={location.pathname === '/about-us' ? 'active' : ''}
           >
-            Tentang Kami
+            About Us
           </Link>
         </li>
 

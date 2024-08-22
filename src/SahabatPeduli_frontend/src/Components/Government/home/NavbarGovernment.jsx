@@ -18,7 +18,7 @@ function NavbarGovernment() {
               to="/government"
               className={location.pathname === '/government' ? 'active' : ''}
             >
-              Beranda
+              Home
             </Link>
           </li>
           <li>
@@ -26,7 +26,7 @@ function NavbarGovernment() {
               to="/about-us-government"
               className={location.pathname === '/about-us-government' ? 'active' : ''}
             >
-              Tentang Kami
+              About Us
             </Link>
           </li>
           <li>
@@ -34,15 +34,15 @@ function NavbarGovernment() {
               to="/dana"
               className={location.pathname === '/dana' ? 'active' : ''}
             >
-              Prospek Dana 
+              Fund Prospects 
             </Link>
           </li>
           <li>
             <Link
               to="/tarik-dana"
-              className={location.pathname === '/tarik-dana' ? 'active' : ''}
+              className={location.pathname === '/withdraw-funds' ? 'active' : ''}
             >
-              Tarik Dana
+              Withdraw Funds
             </Link>
           </li>
         </ul>
@@ -50,7 +50,7 @@ function NavbarGovernment() {
           <button style={{ border: "none", background: "none" }}>
             <FontAwesomeIcon icon={faBell} className="notification-icon"/>
           </button>
-          <button className='create-transaction'>+ Buat Transaksi</button>
+          <button className='create-transaction'>+ Create Transaction</button>
         </div>
     </nav>
   );
