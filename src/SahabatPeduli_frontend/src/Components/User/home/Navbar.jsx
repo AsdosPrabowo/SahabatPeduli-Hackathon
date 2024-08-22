@@ -7,7 +7,12 @@ function Navbar() {
   const [user, setUser] = useState(undefined);
 
   useEffect(() => {
-    const sub = authSubscribe((user) => setUser(user));
+    // Subscribe to authentication changes
+    const sub = authSubscribe((user) => {
+      if(user != null) 
+        console.log(user.owner ?? "kosong")
+      return setUser(user);
+    });
 
     return () => sub();
   }, []);
