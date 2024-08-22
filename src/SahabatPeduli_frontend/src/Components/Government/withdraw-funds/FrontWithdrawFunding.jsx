@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../../assets/styles/government/withdraw-funds/FrontWithdrawFunding.css';
-import NavbarGovernment from '../home/NavbarGovernment';
+import Navbar from '../../User/home/Navbar';
 
 function FrontWithdrawFunding() {
   return (
     <div>
-      <NavbarGovernment />
+      <Navbar />
       <section className='front-withdraw-funding-section'>
         <div className='front-withdraw-heading'>
           <p>Withdraw Funds</p>

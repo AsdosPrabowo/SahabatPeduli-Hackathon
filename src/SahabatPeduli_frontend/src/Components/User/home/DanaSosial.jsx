@@ -1,41 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { SahabatPeduli_backend } from 'declarations/SahabatPeduli_backend'; // Replace with the correct import
+import { listDocs } from "@junobuild/core"; // Ensure correct import path
 import '../../../assets/styles/user/home/DanaSocial.css';
 import DataKependudukan from './DataKependudukan';
 
 function DanaSosial() {
-  const [dataBantuanSosial, setDataBantuanSosial] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
-    const fetchDataBantuanSosial = async () => {
+    const fetchProvincesData = async () => {
       try {
-        const account1 = '5uvni-p3bjy-w3mjd-mjj7h-4r5ur-aosy2-ylben-ox5sj-tweba-qtmeo-qae'; // Replace with actual principal text
-        const account2 = 'bivmj-vwtg2-pvebr-5tcog-2ftzs-jlszj-yokbs-zjoll-qqmnu-4dwq2-sqe'; // Replace with actual principal text
-        const result = await SahabatPeduli_backend.getTotalBalance(account1, account2);
-
-        if (result !== null) {
-          const formattedResult = new Intl.NumberFormat('id-ID').format(result); // Format with thousands separator
-          setDataBantuanSosial(formattedResult);
-        } else {
-          setDataBantuanSosial('Accounts not found');
-        }
+        const docs = await listDocs({
+          collection: "Provinsi"
+        });
+        const provincesData = docs.items || [];
+        const total = provincesData.reduce((sum, item) => {
+          const amount = parseFloat(item.data.totalAmount) || 0; // Convert to number
+          return sum + amount;
+        }, 0);
+        setTotalAmount(total);
       } catch (error) {
-        console.error('Error fetching total social aid fund:', error);
-        setErrorMessage('Failed to fetch total social aid fund');
+        console.error('Error fetching provinces:', error);
+        setErrorMessage('Failed to fetch province data');
       }
     };
 
-    fetchDataBantuanSosial();
+    fetchProvincesData();
   }, []);
 
   return (
     <>
       <section id='dana-sosial'>
         <h4>MINISTRY OF SOCIAL AFFAIRS SOCIAL AID FUND</h4>
-        <h1>ICP {dataBantuanSosial}</h1>
+        <h1>ICP {new Intl.NumberFormat('id-ID').format(totalAmount)}</h1>
         <div className="d-flex justify-content-center">
-          <p>The government allocates a social protection budget, including Direct Cash Assistance (BLT), food social aid, the Family Hope Program (PKH), and Non-Cash Food Assistance (BPNT), amounting to ICP {dataBantuanSosial} in the 2024 State Budget.</p>
+          <p>The government allocates a social protection budget, including Direct Cash Assistance (BLT), food social aid, the Family Hope Program (PKH), and Non-Cash Food Assistance (BPNT), amounting to ICP {new Intl.NumberFormat('id-ID').format(totalAmount)} in the 2024 State Budget.</p>
         </div>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </section>

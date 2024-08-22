@@ -16,8 +16,8 @@ function CreateTransactionGovernment() {
     e.preventDefault();
     
     const senderAccount = '5uvni-p3bjy-w3mjd-mjj7h-4r5ur-aosy2-ylben-ox5sj-tweba-qtmeo-qae';
-    const receiverAccount = 'bivmj-vwtg2-pvebr-5tcog-2ftzs-jlszj-yokbs-zjoll-qqmnu-4dwq2-sqe';
-    const amountNat = BigInt(totalAmount); // Ensure the amount is a BigInt
+    const receiverAccount = 'zud56-g4eif-5jfu4-5zpon-ffvkk-h354s-4qdjt-h4kjg-icmju-6hrzl-rae';
+    const amountNat = BigInt (totalAmount); // Ensure the amount is a BigInt
 
     try {
       // Trigger the balance transfer

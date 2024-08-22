@@ -29,20 +29,13 @@ async function startApp() {
       path: '/about-us',
       element: <AboutUs />,
     },
-    {
-      path: '/government',
-      element: <HomeGovernment />,
-    },
-  {
-      path: '/about-us-government',
-      element: <AboutUsGovernment />,
-    },
+   
     {
       path: '/front-withdraw-funding',
       element: <FrontWithdrawFunding />,
     },
     {
-      path: '/tracker',
+      path: '/withdraw-fundings',
       element: <WithdrawFunds />,
     },
   ]);

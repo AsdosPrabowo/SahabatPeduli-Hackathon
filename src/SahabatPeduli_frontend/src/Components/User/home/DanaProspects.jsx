@@ -24,8 +24,8 @@ function DanaProspects() {
 
   return (
     <>
-      <h4 className="subtitle-prospek">PROSPEK DANA</h4>
-      <h1 className="title-prospek">Pantau Prospek Dana Bantuan Sosial</h1>
+      <h4 className="subtitle-prospek">Fund Prospect</h4>
+      <h1 className="title-prospek">Monitoring Fund Prospect</h1>
       <div className="table-prospects">
         {errorMessage && <p className="error-message">{errorMessage}</p>}
         <table className="table table-hover mt-5">
