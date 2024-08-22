@@ -8,7 +8,11 @@ function Navbar() {
 
   useEffect(() => {
     // Subscribe to authentication changes
-    const sub = authSubscribe((user) => setUser(user));
+    const sub = authSubscribe((user) => {
+      if(user != null) 
+        console.log(user.owner ?? "kosong")
+      return setUser(user);
+    });
 
     return () => sub(); // Unsubscribe when the component unmounts
   }, []);

@@ -14,7 +14,7 @@ function Banner() {
           <div className='banner-content'>
             <h5>APA ITU SAHABAT PEDULI?</h5>
             <h1>Kenalan dengan <span className='highlight-text-1'>Sahabat</span><span className='highlight-text-2'>Peduli</span></h1>
-            <p>SahabatPeduli adalah website untuk mendata bantuan sosial yang diberikan oleh Kementrian Sosial Republik Indonesia. Blabalbalbalblablab</p>
+            <p>SahabatPeduli adalah website untuk mendata bantuan sosial yang diberikan oleh Pemerintah. Untuk masyarakat indonesia</p>
             <button className='read-again '>Baca lagi</button>
           </div>
         </div>
