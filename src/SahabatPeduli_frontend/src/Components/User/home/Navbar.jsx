@@ -7,10 +7,9 @@ function Navbar() {
   const [user, setUser] = useState(undefined);
 
   useEffect(() => {
-    // Subscribe to authentication changes
     const sub = authSubscribe((user) => setUser(user));
 
-    return () => sub(); // Unsubscribe when the component unmounts
+    return () => sub();
   }, []);
 
   const handleSignIn = async () => {
