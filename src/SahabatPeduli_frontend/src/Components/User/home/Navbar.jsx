@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../../../assets/styles/user/home/Navbar.css';
+import { authSubscribe, signIn, signOut } from '@junobuild/core';
 
 function Navbar() {
+  const [user, setUser] = useState(undefined);
+
+  useEffect(() => {
+    // Subscribe to authentication changes
+    const sub = authSubscribe((user) => setUser(user));
+
+    return () => sub(); // Unsubscribe when the component unmounts
+  }, []);
+
+  const handleSignIn = async () => {
+    await signIn();
+  };
   const location = useLocation();
 
   return (
@@ -27,16 +40,9 @@ function Navbar() {
             Tentang Kami
           </Link>
         </li>
-        <li>
-          <Link
-            to="/dana"
-            className={location.pathname === '/dana' ? 'active' : ''}
-          >
-            Prospek Dana
-          </Link>
-        </li>
+
       </ul>
-      <button className="login-button">Masuk</button>
+      <button className="login-button" onClick={user ?  signOut: handleSignIn}>{user ? "Logout" : "Login"}</button>
     </nav>
   );
 }

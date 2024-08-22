@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import '../../../assets/styles/user/home/Banner.css'
 import phone from '../../../assets/images/phone.png'
 function Banner() {
+ 
+
+ 
+  
   return (
     <section className='banner-section'>
       <div className="row">
