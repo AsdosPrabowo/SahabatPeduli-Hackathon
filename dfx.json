@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "SahabatPeduli_backend": {
+      "main": "src/SahabatPeduli_backend/main.mo",
+      "type": "motoko"
+    },
+    "SahabatPeduli_frontend": {
+      "dependencies": [
+        "SahabatPeduli_backend"
+      ],
+      "source": [
+        "src/SahabatPeduli_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "SahabatPeduli_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
