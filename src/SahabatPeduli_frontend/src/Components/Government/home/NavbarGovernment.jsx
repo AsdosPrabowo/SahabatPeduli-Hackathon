@@ -34,7 +34,7 @@ function NavbarGovernment() {
               to="/dana"
               className={location.pathname === '/dana' ? 'active' : ''}
             >
-              Fund Prospects 
+              Tracker
             </Link>
           </li>
           <li>

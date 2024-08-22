@@ -18,7 +18,7 @@ function DataKependudukan() {
             <p>Subdistrict</p>
           </div>
           <div className="desa">
-            <h1>81 Thousand+</h1>
+            <h1>81k+</h1>
             <p>Village</p>
           </div>
         </div>
