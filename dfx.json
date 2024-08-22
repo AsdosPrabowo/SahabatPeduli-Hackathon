@@ -9,11 +9,11 @@
           "ic": "ryjl3-tyaaa-aaaaa-aaaba-cai"
         }
       }
+    },
+    "canister_transaksi": {
+      "main": "src/SahabatPeduli_backend/main.mo",
+      "type": "motoko"
     }
-  },
-  "my_canister": {
-    "main": "src/my_canister/main.mo",
-    "type": "motoko"
   },
   "defaults": {
     "build": {
