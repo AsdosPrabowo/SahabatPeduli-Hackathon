@@ -5,8 +5,10 @@ import '../../../assets/styles/user/home/DanaProspects.css';
 function DanaProspects() {
   const [account1, setAccount1] = useState('');
   const [account2, setAccount2] = useState('');
+  const [amount, setAmount] = useState('');
   const [totalBalance, setTotalBalance] = useState(null);
   const [balance, setBalance] = useState(null);
+  const [transferMessage, setTransferMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleGetTotalBalance = async (event) => {
@@ -32,6 +34,20 @@ function DanaProspects() {
     } catch (error) {
       console.error('Error fetching balance:', error);
       setErrorMessage('Failed to fetch balance');
+    }
+  };
+
+  const handleSendBalance = async (event) => {
+    event.preventDefault();
+    console.log('Sending balance from', account1, 'to', account2, 'amount:', amount);
+    try {
+      const amountNat = BigInt(amount); // Ensure the amount is a BigInt
+      const response = await SahabatPeduli_backend.sendBalance(account1, account2, amountNat);
+      console.log('Transfer result:', response);
+      setTransferMessage(response !== null ? response : 'Transfer failed.');
+    } catch (error) {
+      console.error('Error sending balance:', error);
+      setErrorMessage('Failed to send balance');
     }
   };
 
@@ -86,7 +102,46 @@ function DanaProspects() {
             <p>{balance}</p>
           </div>
         )}
+
+        <form onSubmit={handleSendBalance}>
+          <label>
+            From Account:
+            <input
+              type="text"
+              value={account1}
+              onChange={(e) => setAccount1(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            To Account:
+            <input
+              type="text"
+              value={account2}
+              onChange={(e) => setAccount2(e.target.value)}
+              required
+            />
+          </label>
+          <label>
+            Amount:
+            <input
+              type="number"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              required
+            />
+          </label>
+          <button type="submit">Send Balance</button>
+        </form>
+        {transferMessage && (
+          <div>
+            <h2>Transfer Status:</h2>
+            <p>{transferMessage}</p>
+          </div>
+        )}
+
         {errorMessage && <p className="error-message">{errorMessage}</p>}
+        
         <table className="table table-hover">
           <thead>
             <tr>
