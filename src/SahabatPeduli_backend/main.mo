@@ -66,4 +66,16 @@ actor {
       };
     };
   };
+
+  // Function to add balance to the specified account
+  public func addBalance(account : Text, amount : Nat) : async Text {
+    let principal = Principal.fromText(account);
+    let currentBalanceOpt = balances.get(principal);
+    let newBalance = switch (currentBalanceOpt) {
+      case (null) { amount }; 
+      case (?currentBalance) { currentBalance + amount };
+    };
+    balances.put(principal, newBalance);
+    return "+ for " # account #  Nat.toText(newBalance);
+  };
 };
