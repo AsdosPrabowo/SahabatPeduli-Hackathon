@@ -38,7 +38,7 @@ function FrontWithdrawFunding() {
                 <td>32/11/2024</td>
                 <td>BPNT</td>
                 <td>East Jakarta</td>
-                <td>Rp. 000,000,000,000</td>
+                <td>Rp. 6.000,000,000,000</td>
               </tr>
               {/* tambah row disini mas */}
             </tbody>
