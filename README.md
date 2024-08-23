@@ -1,14 +1,12 @@
-
 # `SahabatPeduli`
 
 ![Thank You](https://res.cloudinary.com/djqxnx7th/image/upload/v1724395098/mjai7kb9iteykekoikaf.png)
-
 
 Welcome to `SahabatPeduli`, an innovative platform designed to revolutionize the distribution of social assistance funds in Indonesia. The project is built on the Internet Computer Protocol (ICP) as a `Fully-Onchain SocialFi application`, utilizing blockchain technology to bring transparency, accountability and efficiency to the process.
 
 ## About SahabatPeduli
 
-In Indonesia, the distribution of social support funds faces several critical challenges, including a lack of transparency, rampant corruption, unequal distribution, and minimal accountability. 
+In Indonesia, the distribution of social support funds faces several critical challenges, including a lack of transparency, rampant corruption, unequal distribution, and minimal accountability.
 
 These issues have led to a loss of public trust and have hindered efforts to ensure that the funds reach those most in need.
 
@@ -98,12 +96,14 @@ Please check the video below to see the demonstration of sahabatPeduli
 [Demo Video](https://youtu.be/XSPycAW1fwc?si=QwDqPsdajE93_znx)
 
 ### Prototype
+
 We failed to do slicing in some designs, to honor our awesome designer, please stop by the following
 [Figma](https://www.figma.com/proto/zLRsLLB7X9iBUpiPzVZRoh/Bansos%2FMakan-Siang-Grates?page-id=41%3A117&node-id=41-118&viewport=535%2C199%2C0.19&t=W2piJohE8V0WISNs-1&scaling=min-zoom&content-scaling=fixed)
 
 The [Deck](https://www.canva.com/design/DAGOopb3Dfg/-kokqj1daLbsxg0msT9P4w/edit?utm_content=DAGOopb3Dfg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 People behind all this :
+
 - Abdul Azis Al AyubbiL: https://github.com/Azis202017 (Github) | Azis213 (Discord)
 - Rizky Ahsan Syarif: https://github.com/IkyyAhsan (Github) | kaizen_6603 (Discord)
 - Dian Syafilla: https://github.com/diansyflla (Github) | diansyflla (Discord)
@@ -115,6 +115,7 @@ oisy wallet : mwuiy-mzh5k-ja6ou-ksbjo-k6n4c-tjhpb-ncxil-4v3cr-i2opk-ab5rn-eae
 You can access the canister using the mainnet URL: https://g5d7e-6qaaa-aaaak-ak2zq-cai.icp0.io/
 
 ### !!! Before you try the Canister !!!
+
 There are 2 roles in this application, the balance recipient and sender roles which due to time constraints we do not provide the claim role feature so to try to use the full transaction function, please access the following backend url:
 https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=g2czq-tiaaa-aaaak-ak2za-cai
 
@@ -123,5 +124,6 @@ scvqe-f6zaq-vscal-hwewf-fqarx-gg5fh-kzbrc-rlsn2-seh72-3b65e-vqe (Sender)
 42e4a-jg5a6-al5jj-ynnqq-3q6ym-kwd2e-2pbvn-rly3p-fi4w2-zecdb-7qe (Receiver)
 
 ![Photo](https://res.cloudinary.com/djqxnx7th/image/upload/v1724397239/Frame_427319709_iwa0hm.png)
+![Photo](<Tangkapan Layar 2024-08-23 pukul 15.22.23.png>)
 
 ## Thank You
