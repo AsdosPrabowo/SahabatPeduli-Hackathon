@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../../assets/styles/government/withdraw-funds/FrontWithdrawFunding.css';
 import Navbar from '../../User/home/Navbar';
+import Footer from '../../User/home/Footer';
 
 function FrontWithdrawFunding() {
   return (
@@ -45,6 +46,7 @@ function FrontWithdrawFunding() {
           </table>
         </div>
       </section>
+      <Footer />
     </div>
   );
 }
