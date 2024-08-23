@@ -70,27 +70,29 @@ function FrontWithdrawFunding() {
             <h2>ICP. {transferredFunds}</h2>
           </div>
         </div>
+
         <div className='transaction-history'>
           <h3>Transaction History</h3>
-          <table className='transaction-table'>
+          <table className='table table-hover mt-5'>
             <thead>
               <tr>
+                <th>No</th>
                 <th>Province Name</th>
                 <th>Date</th>
-                <th>Social Aid Type</th>
-                <th>City</th>
-                <th>Transaction Funds</th>
+                <th>Fund Type</th>
+                <th>Total Amount</th>
               </tr>
             </thead>
             <tbody>
               {transactionHistory.length > 0 ? (
                 transactionHistory.map((doc, index) => (
                   <tr key={index}>
+                    <td>{index + 1}</td>
+
                     <td>{doc.data.provinceName}</td>
                     <td>{new Date(doc.data.hiddenDatetime).toLocaleDateString()}</td>
                     <td>{doc.data.fundType}</td>
-                    <td>{doc.data.city}</td>
-                    <td>{`ICP. ${Number(doc.data.totalAmount).toLocaleString('en-US')}`}</td>
+                    <td>{`ICP${Number(doc.data.totalAmount).toLocaleString('en-US')}`}</td>
                   </tr>
                 ))
               ) : (
