@@ -1,59 +1,117 @@
+
 # `SahabatPeduli`
 
-Welcome to your new `SahabatPeduli` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+![Thank You](https://res.cloudinary.com/djqxnx7th/image/upload/v1724395098/mjai7kb9iteykekoikaf.png)
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
-To learn more before you start working with `SahabatPeduli`, see the following documentation available online:
+Welcome to `SahabatPeduli`, an innovative platform designed to revolutionize the distribution of social assistance funds in Indonesia. The project is built on the Internet Computer Protocol (ICP) as a `Fully-Onchain SocialFi application`, utilizing blockchain technology to bring transparency, accountability and efficiency to the process.
+
+## About SahabatPeduli
+
+In Indonesia, the distribution of social support funds faces several critical challenges, including a lack of transparency, rampant corruption, unequal distribution, and minimal accountability. 
+
+These issues have led to a loss of public trust and have hindered efforts to ensure that the funds reach those most in need.
+
+To address this challenge, we created `SahabatPeduli` or `a Caring Friend` in English, a cutting-edge web platform that operates entirely on top of the ICP blockchain. With `SahabatPeduli`, users can monitor the movement of social assistance funds in real-time, tracking every transaction from the central government to the final recipient. The platform ensures that every transaction is transparently recorded on the blockchain and cannot be altered, allowing the public to securely track the distribution process and restore trust in the social support system.
+
+### Key Features
+
+- **Real-Time Monitoring:** Track the movement of social assistance funds from allocation to distribution in real-time.
+- **Immutable Ledger:** Every transaction is securely recorded on the ICP blockchain, ensuring that the data is tamper-proof.
+- **User-Friendly Interface:** The platform is easily accessible and works across all devices, providing a seamless user experience.
+
+### Technical Overview
+
+From a technical standpoint, `SahabatPeduli` utilizes some of the most powerful tools and frameworks available:
+
+- **Juno Framework:** The platform is built using the Juno framework, which allows us to create a non-SQL database for efficient data tracking. Juno's powerful features enable the management of various services such as data storage, making it an ideal choice for creating a decentralized application on the blockchain.
+- **Motoko Backend:** The backend services are powered by Motoko, which is fully supported by ICP, providing robust and scalable solutions. With Motoko, we manage various actions efficiently, ensuring that the platform remains responsive and secure.
+- **Client-Server Architecture:** The client side is developed with React, ensuring a dynamic and responsive user interface, while the server side is managed by Motoko within the Juno framework. This combination ensures that `SahabatPeduli` is not only powerful but also user-friendly and accessible to all.
+
+`SahabatPeduli` isn’t just a concept; it's a real-world solution. By leveraging the power of the Internet Computer, we’ve built a platform that is functional, secure, and has the potential to significantly improve lives across Indonesia. The use of ICP's ledger allows for direct transactions, further enhancing the efficiency and transparency of the system.
+
+### X Factor and Potential
+
+The wow factor of "SahabatPeduli" lies in its innovative use of blockchain technology, specifically ICP, to address critical issues in social aid distribution. The platform's potential is immense as it not only enhances transparency and accountability but also restores public trust in government social assistance programs. By providing real-time tracking, immutable blockchain records for transactions, and easy accessibility, it offers a groundbreaking solution that can be scaled to other regions and contexts.
+
+### Technical Competence
+
+We use the Juno framework to help us build a blockchain dApp and also use Motoko as a backend service to support various services within our platform. Juno is powerful for handling multiple services like data storage, helping us create a non-SQL database for tracking data. Combined with Motoko, Juno becomes even more powerful, providing full support for ICP. `SahabatPeduli` uses a client-server schema, with the client using React and the backend using Motoko within the Juno framework, ensuring a robust and scalable solution.
+
+### Impact
+
+"SahabatPeduli" directly addresses significant real-world issues such as lack of transparency and corruption, unequal distribution of funds, and lack of accountability in Indonesia. It provides a practical solution that is immediately usable by both the government and the public. The platform's user-friendly interface ensures that people of all backgrounds can access and benefit from the service, making it a valuable tool in the fight against social inequity.
+
+### Progression
+
+Yes, we effectively utilized libraries and services in the development of `SahabatPeduli`. By incorporating existing libraries, we streamlined the integration of core functionalities, such as cryptographic operations and user authentication via Internet Identity, into our dApp. The service is fully functional and deployed on the Internet Computer mainnet, making it accessible and usable by end-users for transparent management of social product funds. We went as far as deploying a fully operational, on-chain application that demonstrates the practical viability of ICP technology in addressing real-world challenges, ensuring a high level of usability and security throughout the process.
+
+### IC Superpowers
+
+We utilized ICP's superpowers effectively by leveraging ledgers to facilitate payments and receipts in ICP tokens, employing canisters for managing various actions, using Motoko to handle these actions, and using Juno to optimize data utilization. These elements combined make `SahabatPeduli` a powerful and efficient platform that leverages the full potential of the Internet Computer.
+
+## Getting Started
+
+To start exploring and developing with `SahabatPeduli`, you can navigate through the project directory structure and familiarize yourself with the configuration files. Below are some steps and commands to help you get started:
+
+### Project Setup
+
+To begin, explore the project directory and familiarize yourself with the structure. Working within this environment will not impact any production deployments or identity tokens.
+
+For more information and detailed guidance, refer to the following resources:
 
 - [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
 - [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
 - [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
 - [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
 
-If you want to start working on your project right away, you might want to try the following commands:
+### Running the Project Locally
+
+If you want to test `SahabatPeduli` locally, use the following commands:
 
 ```bash
+# Navigate to the project directory
 cd SahabatPeduli/
-dfx help
-dfx canister --help
-```
 
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
+# Start the local ICP replica in the background
 dfx start --background
 
-# Deploys your canisters to the replica and generates your candid interface
+# Deploy canisters to the replica and generate your candid interface
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+### What we have learned
 
-If you have made changes to your backend canister, you can generate a new candid interface with
+During the preparation of hacktahon and especially the 2 days of work, we learned that icp is a movement that will be a very big thing later, we learned many things from what is a canister, how to make it, how to architect it, learning how to create a fully onchain app using motoko.
 
-```bash
-npm run generate
-```
+### Challenges we faced
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+We experienced many technical issues, ranging from canister issues, deploy mainnet, to ladger issues. Fortunately, the mentors from icp helped very well and full of effort even made mr gabor himself create an issue in our repository which you can see here: https://github.com/AsdosPrabowo/SahabatPeduli-Hackathon/issues
 
-If you are making frontend changes, you can start a development server with
+### The things we're proud of
 
-```bash
-npm start
-```
+This is our first blockchain project, we didn't even really understand web3 before this and we managed to create this simple project in less than 2 days. We are very proud of the progress we went through, the stark difference from a lot of errors until we were able to solve it with the help of our mentors.
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+### Demo Video
 
-### Note on frontend environment variables
+Please check the video below to see the demonstration of sahabatPeduli
+[Demo Video](https://youtu.be/XSPycAW1fwc?si=QwDqPsdajE93_znx)
 
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
+### Prototype
+We failed to do slicing in some designs, to honor our awesome designer, please stop by the following
+[Figma](https://www.figma.com/proto/zLRsLLB7X9iBUpiPzVZRoh/Bansos%2FMakan-Siang-Grates?page-id=41%3A117&node-id=41-118&viewport=535%2C199%2C0.19&t=W2piJohE8V0WISNs-1&scaling=min-zoom&content-scaling=fixed)
 
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+The [Deck](https://www.canva.com/design/DAGOopb3Dfg/-kokqj1daLbsxg0msT9P4w/edit?utm_content=DAGOopb3Dfg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+People behind all this :
+- Abdul Azis Al AyubbiL: https://github.com/Azis202017 (Github) | Azis213 (Discord)
+- Rizky Ahsan Syarif: https://github.com/IkyyAhsan (Github) | kaizen_6603 (Discord)
+- Dian Syafilla: https://github.com/diansyflla (Github) | diansyflla (Discord)
+- Muhammad Dafa Sirajudin: https://github.com/dafajudin (Github) | mas_dafa2021 (Discord)
+- Raditya Aydin: https://github.com/Radiit (Github) | .radit (Discord)
+
+oisy wallet : mwuiy-mzh5k-ja6ou-ksbjo-k6n4c-tjhpb-ncxil-4v3cr-i2opk-ab5rn-eae
+
+You can access the canister using the mainnet URL: https://g5d7e-6qaaa-aaaak-ak2zq-cai.icp0.io/
+
+## Thank You
