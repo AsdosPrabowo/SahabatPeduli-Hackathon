@@ -40,13 +40,13 @@ function DanaProspects() {
           </thead>
           <tbody>
             {provinces.length > 0 ? (
-              provinces.map((doc, index) => (
+              provinces.slice(0, 5).map((doc, index) => (
                 <tr key={doc.key}>
                   <td>{index + 1}</td>
                   <td>{doc.data.provinceName}</td>
                   <td>{new Date(doc.data.hiddenDatetime).toLocaleDateString()}</td>
                   <td>{doc.data.fundType}</td>
-                  <td>{doc.data.totalAmount}</td>
+                  <td>ICP{doc.data.totalAmount}</td>
                 </tr>
               ))
             ) : (

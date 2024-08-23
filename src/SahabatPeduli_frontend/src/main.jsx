@@ -31,6 +31,11 @@ async function startApp() {
     },
    
     {
+      path: '/tracker',
+      element: <p>Hello world</p>
+    },
+   
+    {
       path: '/front-withdraw-funding',
       element: <FrontWithdrawFunding />,
     },

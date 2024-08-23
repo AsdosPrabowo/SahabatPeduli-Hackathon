@@ -4,31 +4,43 @@ import '../../../assets/styles/user/home/Navbar.css';
 import { authSubscribe, signIn, signOut } from '@junobuild/core';
 
 function Navbar() {
-  const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState(null); // Initialize with `null` to avoid confusion with `undefined`
   const navigate = useNavigate();
   const location = useLocation();
 
   useEffect(() => {
-    // Subscribe to authentication changes
-    const sub = authSubscribe((user) => {
-      console.log(user?.owner ?? "kosong");
-      setUser(user);
+    const unsubscribe = authSubscribe((authUser) => {
+      if (authUser) {
+        console.log("User owner ID:", authUser.owner ?? "Owner property is missing");
+        setUser(authUser);
+      } else {
+        console.log("User object is undefined or user is signed out");
+        setUser(null); // Reset user to null on sign out
+      }
     });
 
-    return () => sub();
+    return () => unsubscribe(); // Clean up the subscription on unmount
   }, []);
 
   const handleSignIn = async () => {
-    await signIn();
+    try {
+      await signIn();
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+    }
   };
 
   const handleSignOut = async () => {
-    await signOut();
+    try {
+      await signOut();
+    } catch (error) {
+      console.error("Error during sign-out:", error);
+    }
   };
 
   const handleButtonClick = () => {
     if (user) {
-      if (user.owner === "5uvni-p3bjy-w3mjd-mjj7h-4r5ur-aosy2-ylben-ox5sj-tweba-qtmeo-qae") {
+      if (user.owner === "gvprf-qotuf-tl3da-uafsv-sjnx7-jm3iu-pbrvi-bzmqk-tj3th-kg2qc-tae") {
         navigate('/withdraw-fundings');
       } else {
         handleSignOut();
@@ -78,7 +90,7 @@ function Navbar() {
         </li>
       </ul>
       <button className="login-button" onClick={handleButtonClick}>
-        {user ? (user.owner === "5uvni-p3bjy-w3mjd-mjj7h-4r5ur-aosy2-ylben-ox5sj-tweba-qtmeo-qae" ? "Create Transaction" : "Logout") : "Login"}
+        {user ? (user.owner === "gvprf-qotuf-tl3da-uafsv-sjnx7-jm3iu-pbrvi-bzmqk-tj3th-kg2qc-tae" ? "Create Transaction" : "Logout") : "Login"}
       </button>
     </nav>
   );

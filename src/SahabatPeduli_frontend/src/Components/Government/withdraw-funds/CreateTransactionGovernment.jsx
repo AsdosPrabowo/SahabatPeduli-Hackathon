@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SahabatPeduli_backend } from 'declarations/SahabatPeduli_backend'; // Replace with the correct import
+import { SahabatPeduli_backend } from 'declarations/SahabatPeduli_backend'; // Ganti dengan import yang benar
 import { setDoc } from "@junobuild/core";
 import { nanoid } from 'nanoid';
 import '../../../assets/styles/government/withdraw-funds/CreateTransactionGovernment.css';
@@ -14,41 +14,58 @@ function CreateTransactionGovernment() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    if (!province || !fundType || !totalAmount || totalAmount <= 0) {
+      setErrorMessage('Please fill all fields correctly.');
+      return;
+    }
+
     const senderAccount = '5uvni-p3bjy-w3mjd-mjj7h-4r5ur-aosy2-ylben-ox5sj-tweba-qtmeo-qae';
     const receiverAccount = 'zud56-g4eif-5jfu4-5zpon-ffvkk-h354s-4qdjt-h4kjg-icmju-6hrzl-rae';
-    const amountNat = BigInt (totalAmount); // Ensure the amount is a BigInt
+    const amountNat = BigInt(totalAmount); // Ensure the amount is a BigInt
 
     try {
-      // Trigger the balance transfer
-      const response = await SahabatPeduli_backend.sendBalance(senderAccount, receiverAccount, amountNat);
+      // Step 1: Check sender's balance
+      const senderBalance = await SahabatPeduli_backend.getBalance(senderAccount);
 
-      if (response) {
-        setTransferMessage('Transfer successful!');
-        
-        // Generate a unique key
-        const uniqueKey = nanoid();
+      if (senderBalance && BigInt(senderBalance) >= amountNat) {
+        // Step 2: Trigger the balance transfer
+        const response = await SahabatPeduli_backend.sendBalance(senderAccount, receiverAccount, amountNat);
 
-        // Create document data
-        const documentData = {
-          provinceName: province,
-          fundType: fundType,
-          totalAmount: totalAmount,
-          hiddenDatetime: new Date().toISOString() // Hidden datetime
-        };
+        if (response) {
+          setTransferMessage('Transfer successful!');
 
-        // Set the document in the "Provinsi" collection
-        await setDoc({
-          collection: "Provinsi",
-          doc: {
-            key: uniqueKey,
-            data: documentData
-          }
-        });
+          // Generate a unique key
+          const uniqueKey = nanoid();
 
-        alert('Transaction successfully created and document added!');
+          // Create document data
+          const documentData = {
+            provinceName: province,
+            fundType: fundType,
+            totalAmount: totalAmount,
+            hiddenDatetime: new Date().toISOString(), // Hidden datetime
+          };
+
+          // Step 3: Set the document in the "Provinsi" collection
+          await setDoc({
+            collection: 'Provinsi',
+            doc: {
+              key: uniqueKey,
+              data: documentData,
+            },
+          });
+
+          alert('Transaction successfully created and document added!');
+          // Reset form fields
+          setProvince('');
+          setFundType('');
+          setTotalAmount('');
+          setTransferMessage('');
+        } else {
+          setTransferMessage('Transfer failed.');
+        }
       } else {
-        setTransferMessage('Transfer failed.');
+        setErrorMessage('Insufficient funds in the sender\'s account.');
       }
     } catch (error) {
       console.error('Error during the process:', error);
