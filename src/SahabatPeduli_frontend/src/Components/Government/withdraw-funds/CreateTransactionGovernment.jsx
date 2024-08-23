@@ -17,8 +17,8 @@ function CreateTransactionGovernment() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const senderAccount = '5uvni-p3bjy-w3mjd-mjj7h-4r5ur-aosy2-ylben-ox5sj-tweba-qtmeo-qae';
-    const receiverAccount = 'zud56-g4eif-5jfu4-5zpon-ffvkk-h354s-4qdjt-h4kjg-icmju-6hrzl-rae';
+    const senderAccount = 'scvqe-f6zaq-vscal-hwewf-fqarx-gg5fh-kzbrc-rlsn2-seh72-3b65e-vqe';
+    const receiverAccount = '42e4a-jg5a6-al5jj-ynnqq-3q6ym-kwd2e-2pbvn-rly3p-fi4w2-zecdb-7qe';
     const amountNat = BigInt(totalAmount);
 
     try {
