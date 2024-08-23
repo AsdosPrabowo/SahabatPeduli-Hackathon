@@ -40,7 +40,7 @@ function Navbar() {
 
   const handleButtonClick = () => {
     if (user) {
-      if (user.owner === "gvprf-qotuf-tl3da-uafsv-sjnx7-jm3iu-pbrvi-bzmqk-tj3th-kg2qc-tae") {
+      if (user.owner === "3duio-p4atu-wokz5-zxtib-urvrk-d23k2-frt3s-7klw3-iazh7-urait-rqe") {
         navigate('/withdraw-fundings');
       } else {
         handleSignOut();
@@ -90,7 +90,7 @@ function Navbar() {
         </li>
       </ul>
       <button className="login-button" onClick={handleButtonClick}>
-        {user ? (user.owner === "gvprf-qotuf-tl3da-uafsv-sjnx7-jm3iu-pbrvi-bzmqk-tj3th-kg2qc-tae" ? "Create Transaction" : "Logout") : "Login"}
+        {user ? (user.owner === "3duio-p4atu-wokz5-zxtib-urvrk-d23k2-frt3s-7klw3-iazh7-urait-rqe" ? "Create Transaction" : "Logout") : "Login"}
       </button>
     </nav>
   );
