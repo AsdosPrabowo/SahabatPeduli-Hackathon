@@ -85,42 +85,42 @@ function CreateTransactionGovernment() {
                     onChange={(e) => setProvince(e.target.value)}
                   >
                     <option value="">Select Province</option>
-                    <option value="aceh">Aceh</option>
-                    <option value="bali">Bali</option>
-                    <option value="banten">Banten</option>
-                    <option value="bengkulu">Bengkulu</option>
-                    <option value="gorontalo">Gorontalo</option>
-                    <option value="jakarta">Jakarta</option>
-                    <option value="jambi">Jambi</option>
-                    <option value="jabar">Jawa Barat</option>
-                    <option value="jateng">Jawa Tengah</option>
-                    <option value="jatim">Jawa Timur</option>
-                    <option value="kalbar">Kalimantan Barat</option>
-                    <option value="kaltim">Kalimantan Timur</option>
-                    <option value="kalteng">Kalimantan Tengah</option>
-                    <option value="kaltara">Kalimantan Utara</option>
-                    <option value="kalut">Kalimantan Selatan</option>
-                    <option value="kepbangka">Kep. Bangka Belitung</option>
-                    <option value="kepriau">Kep. Riau</option>
-                    <option value="lampung">Lampung</option>
-                    <option value="maluku">Maluku</option>
-                    <option value="malukut">Maluku Utara</option>
-                    <option value="ntt">Nusa Tenggara Timur</option>
-                    <option value="ntb">Nusa Tenggara Barat</option>
-                    <option value="papbar">Papua Barat</option>
-                    <option value="papsel">Papua Selatan</option>
-                    <option value="pappem">Papua Pegunungan</option>
-                    <option value="papu">Papua</option>
-                    <option value="riau">Riau</option>
-                    <option value="sulbar">Sulawesi Barat</option>
-                    <option value="sulsel">Sulawesi Selatan</option>
-                    <option value="sulteng">Sulawesi Tengah</option>
-                    <option value="sultra">Sulawesi Tenggara</option>
-                    <option value="sulut">Sulawesi Utara</option>
-                    <option value="sumbar">Sumatera Barat</option>
-                    <option value="sumsel">Sumatera Selatan</option>
-                    <option value="sumut">Sumatera Utara</option>
-                    <option value="yogya">Yogyakarta</option>
+                    <option value="Aceh">Aceh</option>
+                    <option value="Bali">Bali</option>
+                    <option value="Banten">Banten</option>
+                    <option value="Bengkulu">Bengkulu</option>
+                    <option value="Gorontalo">Gorontalo</option>
+                    <option value="Jakarta">Jakarta</option>
+                    <option value="Jambi">Jambi</option>
+                    <option value="Jabar">Jawa Barat</option>
+                    <option value="Jateng">Jawa Tengah</option>
+                    <option value="Jatim">Jawa Timur</option>
+                    <option value="Kalbar">Kalimantan Barat</option>
+                    <option value="Kaltim">Kalimantan Timur</option>
+                    <option value="Kalteng">Kalimantan Tengah</option>
+                    <option value="Kaltara">Kalimantan Utara</option>
+                    <option value="Kalut">Kalimantan Selatan</option>
+                    <option value="KepBangka">Kep. Bangka Belitung</option>
+                    <option value="Kepriau">Kep. Riau</option>
+                    <option value="Lampung">Lampung</option>
+                    <option value="Maluku">Maluku</option>
+                    <option value="Malukut">Maluku Utara</option>
+                    <option value="NTT">Nusa Tenggara Timur</option>
+                    <option value="NTB">Nusa Tenggara Barat</option>
+                    <option value="Papbar">Papua Barat</option>
+                    <option value="Papsel">Papua Selatan</option>
+                    <option value="Pappem">Papua Pegunungan</option>
+                    <option value="Papu">Papua</option>
+                    <option value="Riau">Riau</option>
+                    <option value="Sulbar">Sulawesi Barat</option>
+                    <option value="Sulses">Sulawesi Selatan</option>
+                    <option value="Sulteng">Sulawesi Tengah</option>
+                    <option value="Sultra">Sulawesi Tenggara</option>
+                    <option value="Sulut">Sulawesi Utara</option>
+                    <option value="Sumbar">Sumatera Barat</option>
+                    <option value="Sumsel">Sumatera Selatan</option>
+                    <option value="Sumut">Sumatera Utara</option>
+                    <option value="Yogya">Yogyakarta</option>
                   </select>
                 </div>
                 <div className='form-group-2 mt-5'>
@@ -133,10 +133,10 @@ function CreateTransactionGovernment() {
                     onChange={(e) => setFundType(e.target.value)}
                   >
                     <option value="">Select Funds Type</option>
-                    <option value="blt">BLT</option>
-                    <option value="pkh">PKH</option>
-                    <option value="bpnt">BPNT</option>
-                    <option value="pangan">Pangan</option>
+                    <option value="BLT">BLT</option>
+                    <option value="PKH">PKH</option>
+                    <option value="BPNT">BPNT</option>
+                    <option value="PANGAN">Pangan</option>
                   </select>
                 </div>
                 <div className='form-group-3 mt-5'>
