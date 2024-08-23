@@ -75,7 +75,7 @@ function CreateTransactionGovernment() {
                 <h5>Fund Transaction</h5>
               </div>
               <form onSubmit={handleSubmit}>
-                <div className='form-group-1'>
+                <div className='form-group-1 mt-5'>
                   <label htmlFor="province">Province Name</label>
                   <select
                     id="province"
@@ -123,7 +123,7 @@ function CreateTransactionGovernment() {
                     <option value="yogya">Yogyakarta</option>
                   </select>
                 </div>
-                <div className='form-group-2'>
+                <div className='form-group-2 mt-5'>
                   <label htmlFor="fundType">Funds Type</label>
                   <select
                     id="fundType"
@@ -139,7 +139,7 @@ function CreateTransactionGovernment() {
                     <option value="pangan">Pangan</option>
                   </select>
                 </div>
-                <div className='form-group-3'>
+                <div className='form-group-3 mt-5'>
                   <label htmlFor="totalAmount">Total Amount</label>
                   <input
                     id="totalAmount"

@@ -102,7 +102,7 @@ function FrontWithdrawFunding() {
           </table>
         </div>
       </section>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

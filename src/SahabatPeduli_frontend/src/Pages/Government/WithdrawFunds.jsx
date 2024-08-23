@@ -8,7 +8,7 @@ function WithdrawFunds() {
     <div>
       <Navbar/>
       <CreateTransactionGovernment/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   )
 }
