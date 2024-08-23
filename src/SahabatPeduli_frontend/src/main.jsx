@@ -8,6 +8,7 @@ import HomeGovernment from './Pages/Government/HomeGovernment';
 import AboutUsGovernment from './Pages/Government/AboutUsGovernment';
 import WithdrawFunds from './Pages/Government/WithdrawFunds';
 import FrontWithdrawFunding from './Components/Government/withdraw-funds/FrontWithdrawFunding';
+import Tracker from './Components/User/home/Tracker';
 
 async function startApp() {
   // Initialize the satellite
@@ -32,7 +33,7 @@ async function startApp() {
    
     {
       path: '/tracker',
-      element: <p>Hello world</p>
+      element: <Tracker />
     },
    
     {
@@ -43,6 +44,7 @@ async function startApp() {
       path: '/withdraw-fundings',
       element: <WithdrawFunds />,
     },
+   
   ]);
 
   // Render the application

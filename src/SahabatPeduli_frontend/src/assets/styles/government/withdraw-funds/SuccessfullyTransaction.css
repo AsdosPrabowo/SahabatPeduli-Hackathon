@@ -1,0 +1,136 @@
+.successfully-transaction-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .successfully-transaction-header p{
+    color: var(--Black, #353535);
+text-align: center;
+
+/* Poppins Bold 64px */
+font-family: Poppins;
+font-size: 64px;
+font-style: normal;
+font-weight: 700;
+line-height: 84px; /* 131.25% */
+  }
+  
+  .successfully-transaction-background {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .successfully-transaction-background img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .transaction-form {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    text-align: center;
+  }
+  
+  .transaction-form h5 {
+    overflow: hidden;
+    color: #3A3C4C;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    display: -webkit-box;
+    width: 267px;
+    -webkit-box-orient: vertical;
+  }
+  
+  .successfully-transaction-body {
+    text-align: center;
+  }
+
+  .successfully-transaction-body p {
+    color: #3B3D4B;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19px;
+    text-transform: capitalize;
+  }
+
+  .successfully-desc p {
+    width: 250px;
+    color: #7D7C93;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.24px;
+  }
+  
+  .checkmark-lottie {
+    margin-bottom: 20px;
+  }
+  
+  .checkmark {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #28a745;
+    position: relative;
+  }
+  
+  .checkmark::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 20px;
+    height: 40px;
+    border: solid white;
+    border-width: 0 5px 5px 0;
+  }
+  
+  p {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #353535;
+    margin-bottom: 15px;
+  }
+  
+  .download-btn {
+    display: flex;
+    margin-top: 51px;
+    width: 335px;
+    height: 53px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--Blue, #0D4E77);
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+  }
+  
