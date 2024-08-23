@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { listDocs } from "@junobuild/core"; // Ensure correct import path
 import '../../../assets/styles/user/home/DanaProspects.css';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 function Tracker() {
   const [provinces, setProvinces] = useState([]);
@@ -62,6 +63,7 @@ function Tracker() {
           </table>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }
