@@ -114,4 +114,14 @@ oisy wallet : mwuiy-mzh5k-ja6ou-ksbjo-k6n4c-tjhpb-ncxil-4v3cr-i2opk-ab5rn-eae
 
 You can access the canister using the mainnet URL: https://g5d7e-6qaaa-aaaak-ak2zq-cai.icp0.io/
 
+### !!! Before you try the Canister !!!
+There are 2 roles in this application, the balance recipient and sender roles which due to time constraints we do not provide the claim role feature so to try to use the full transaction function, please access the following backend url:
+https://a4gq6-oaaaa-aaaab-qaa4q-cai.raw.icp0.io/?id=g2czq-tiaaa-aaaak-ak2za-cai
+
+scvqe-f6zaq-vscal-hwewf-fqarx-gg5fh-kzbrc-rlsn2-seh72-3b65e-vqe (Sender)
+
+42e4a-jg5a6-al5jj-ynnqq-3q6ym-kwd2e-2pbvn-rly3p-fi4w2-zecdb-7qe (Receiver)
+
+![Photo](https://res.cloudinary.com/djqxnx7th/image/upload/v1724397239/Frame_427319709_iwa0hm.png)
+
 ## Thank You
