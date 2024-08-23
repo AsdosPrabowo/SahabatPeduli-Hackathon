@@ -61,11 +61,11 @@ function FrontWithdrawFunding() {
           <p>Withdraw Funds</p>
         </div>
         <div className='row'>
-          <div className='sisa-dana-card-1'>
+          <div className='sisa-dana-card-1 text-white'>
             <p>Remaining Funds</p>
             <h2>ICP. {remainingFunds}</h2>
           </div>
-          <div className='sisa-dana-card-2'>
+          <div className='sisa-dana-card-2 text-white'>
             <p>Funds Already Transferred</p>
             <h2>ICP. {transferredFunds}</h2>
           </div>
