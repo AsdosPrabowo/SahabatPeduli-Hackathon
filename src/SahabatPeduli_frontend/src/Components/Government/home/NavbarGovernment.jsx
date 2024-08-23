@@ -31,8 +31,8 @@ function NavbarGovernment() {
           </li>
           <li>
             <Link
-              to="/dana"
-              className={location.pathname === '/dana' ? 'active' : ''}
+              to="/successfully-transaction"
+              className={location.pathname === '/successfully-transaction' ? 'active' : ''}
             >
               Tracker
             </Link>
